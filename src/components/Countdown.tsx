@@ -57,26 +57,22 @@ export default function Countdown() {
       <FloatingMandala className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-md mx-auto relative z-10 flex flex-col items-center">
-        <BotanicalCrest />
-        <motion.span
-          initial={{ opacity: 0, y: 10 }}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-1"
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center"
         >
-          Countdown
-        </motion.span>
-        
-        <motion.h3
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-2xl sm:text-3xl font-serif text-ink-900 dark:text-gold-100 mb-2"
-        >
-          Menuju Hari Bahagia
-        </motion.h3>
+          <BotanicalCrest />
+          <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-1">
+            Countdown
+          </span>
+          
+          <h3 className="text-2xl sm:text-3xl font-serif text-ink-900 dark:text-gold-100 mb-2">
+            Menuju Hari Bahagia
+          </h3>
+        </motion.div>
 
         <HeaderDivider className="mb-8" />
 
@@ -85,10 +81,10 @@ export default function Countdown() {
           {timeUnits.map((unit, index) => (
             <motion.div
               key={unit.label}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.96, y: 10 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 2.0, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
               className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl border border-gold-300/30 dark:border-ink-700/30 shadow-sm p-3 flex flex-col justify-center items-center relative overflow-hidden group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
             >
               {/* Soft gold hover glow */}
@@ -116,14 +112,14 @@ export default function Countdown() {
 
         {/* Save to Calendar Button */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.45 }}
           className="mt-8"
         >
           <a
-            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Ajis+and+Amel&dates=20260628T010000Z/20260628T080000Z&details=Pernikahan+Ajis+and+Amel&location=The+Grand+Ballroom,+Jakarta"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Mudjie+and+Anis&dates=20260628T010000Z/20260628T080000Z&details=Pernikahan+Mudjie+and+Anis&location=The+Grand+Ballroom,+Jakarta"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold-400/30 text-gold-700 dark:text-gold-300 bg-white/50 dark:bg-zinc-900/30 text-xs tracking-wider uppercase font-sans font-semibold hover:bg-gold-500 hover:text-zinc-950 hover:border-gold-500 active:scale-95 transition-all duration-300 shadow-sm"

@@ -89,7 +89,13 @@ export default function Wishes() {
       <div className="max-w-2xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-12 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-12 flex flex-col items-center"
+        >
           <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Doa Restu
@@ -101,10 +107,16 @@ export default function Wishes() {
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 px-4">
             Berikan ucapan selamat, harapan, serta doa terbaik Anda untuk mengiringi langkah baru pernikahan kami.
           </p>
-        </div>
+        </motion.div>
 
         {/* Input Form Card */}
-        <div className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm max-w-lg mx-auto mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm max-w-lg mx-auto mb-12"
+        >
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col text-left">
               <label htmlFor="wishes-name" className="text-xs font-sans font-semibold tracking-wider text-zinc-600 dark:text-zinc-400 mb-2 uppercase">
@@ -157,7 +169,7 @@ export default function Wishes() {
               )}
             </button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Live Messages List Card */}
         <div className="max-w-lg mx-auto">
@@ -175,10 +187,10 @@ export default function Wishes() {
               {comments.map((comment, index) => (
                 <motion.div
                   key={comment.id}
-                  initial={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
                   className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl p-5 border border-gold-300/20 dark:border-ink-700/20 shadow-sm relative group hover:border-gold-300 dark:hover:border-zinc-700 transition-colors"
                 >
                   {/* Top Header inside wish card */}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { Theme } from './types';
 
 // Importing modular components
@@ -89,11 +90,13 @@ export default function App() {
 
       {/* 4. Full Wedding Invitation Main Sections Wrapper */}
       {/* Underlaid container is revealed after unlocking */}
-      <div 
+      <motion.div 
         id="main-invitation-container"
-        className={`transition-all duration-1000 relative z-10 ${
-          isOpen ? 'opacity-100 scale-100 filter blur-none' : 'opacity-0 scale-95 filter blur-md pointer-events-none'
-        }`}
+        initial={{ opacity: 0, scale: 0.98, y: 30 }}
+        animate={isOpen ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.98, y: 30 }}
+        transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10"
+        style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
       >
         <div className="max-w-md md:max-w-3xl mx-auto shadow-2xl bg-cream dark:bg-ink-900 border-x border-gold-200/50 dark:border-ink-700/30 relative overflow-hidden">
           
@@ -128,7 +131,7 @@ export default function App() {
           <Footer />
 
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

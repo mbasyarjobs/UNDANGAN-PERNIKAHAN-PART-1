@@ -7,8 +7,8 @@ export default function Footer() {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'Undangan Pernikahan Ajis & Amel',
-        text: 'Undangan Pernikahan Digital Premium Ajis & Amel - Sabtu, 28 Juni 2026',
+        title: 'Undangan Pernikahan Mudjie & Anis',
+        text: 'Undangan Pernikahan Digital Premium Mudjie & Anis - Sabtu, 28 Juni 2026',
         url: window.location.href,
       }).catch((err) => console.log('Error sharing:', err));
     } else {
@@ -40,7 +40,7 @@ export default function Footer() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-4 px-2"
         >
           <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-sans max-w-sm mx-auto">
@@ -53,10 +53,10 @@ export default function Footer() {
 
         {/* Closing Signature */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.95, y: 15 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-2 flex flex-col items-center"
         >
           <BotanicalCrest />
@@ -77,9 +77,10 @@ export default function Footer() {
 
         {/* Share Invitation Link */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="pt-4 flex flex-col items-center gap-3"
         >
           <button
@@ -93,7 +94,7 @@ export default function Footer() {
 
         {/* Decorative footer bottom note */}
         <div className="pt-12 text-[10px] font-mono tracking-wider text-zinc-400 dark:text-zinc-600 select-none">
-          © {new Date().getFullYear()} AJIS & AMEL WEDDING. ALL RIGHTS RESERVED.
+          © {new Date().getFullYear()} MUDJIE & ANIS WEDDING. ALL RIGHTS RESERVED.
         </div>
 
       </div>

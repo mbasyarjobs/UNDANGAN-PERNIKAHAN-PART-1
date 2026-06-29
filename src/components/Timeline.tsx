@@ -12,7 +12,13 @@ export default function Timeline() {
       <FloatingMandala className="top-1/3 left-10" />
 
       <div className="max-w-2xl mx-auto relative z-10">
-        <div className="text-center mb-16 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-16 flex flex-col items-center"
+        >
           <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Momen Spesial
@@ -24,7 +30,7 @@ export default function Timeline() {
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 max-w-sm mx-auto">
             Bagaimana petualangan indah ini bermula hingga kami dipersatukan dalam komitmen suci.
           </p>
-        </div>
+        </motion.div>
 
         {/* Vertical Timeline */}
         <div className="relative border-l border-gold-300/40 dark:border-zinc-800 ml-4 sm:ml-6 md:mx-auto md:border-l-0 md:before:absolute md:before:left-1/2 md:before:top-0 md:before:h-full md:before:w-[1px] md:before:bg-gold-300/40 md:before:dark:bg-zinc-800">
@@ -42,10 +48,10 @@ export default function Timeline() {
                 {/* Left/Right Container Grid for alternate layouts */}
                 <div className={`w-full md:w-[45%] pl-8 md:pl-0 ${isEven ? 'md:text-right md:order-1' : 'md:text-left md:order-2'}`}>
                   <motion.div
-                    initial={{ opacity: 0, x: isEven ? -20 : 20, y: 10 }}
+                    initial={{ opacity: 0, x: isEven ? -15 : 15, y: 15 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    viewport={{ once: true, margin: '-50px' }}
-                    transition={{ duration: 0.8, delay: index * 0.15 }}
+                    viewport={{ once: true, margin: '-100px' }}
+                    transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
                     className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl p-6 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
                   >
                     {/* Decorative Card Light Spot */}

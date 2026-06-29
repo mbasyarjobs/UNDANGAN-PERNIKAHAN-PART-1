@@ -9,7 +9,7 @@ export default function Gallery() {
 
   // List of images for the gallery grid
   const galleryImages = [
-    { src: weddingImages.hero, alt: 'Ajis & Amel Romantic Sunset' },
+    { src: weddingImages.hero, alt: 'Mudjie & Anis Romantic Sunset' },
     { src: weddingImages.rings, alt: 'Gold Wedding Bands' },
     { src: weddingImages.decor, alt: 'Wedding Reception Decor' },
     { src: weddingImages.groom, alt: 'Groom Portrait' },
@@ -38,22 +38,21 @@ export default function Gallery() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.12,
+        staggerChildren: 0.18,
         delayChildren: 0.15,
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 35, scale: 0.95 },
+    hidden: { opacity: 0, y: 25, scale: 0.96 },
     show: { 
       opacity: 1, 
       y: 0, 
       scale: 1,
       transition: {
-        type: "spring",
-        stiffness: 60,
-        damping: 14,
+        duration: 2.2,
+        ease: [0.16, 1, 0.3, 1],
       }
     }
   };
@@ -68,7 +67,13 @@ export default function Gallery() {
       <div className="max-w-4xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-16 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-16 flex flex-col items-center"
+        >
           <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Momen Bahagia
@@ -80,7 +85,7 @@ export default function Gallery() {
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 max-w-sm mx-auto">
             Goresan kebahagiaan dan kehangatan kebersamaan kami yang terekam dalam lensa.
           </p>
-        </div>
+        </motion.div>
 
         {/* Gallery Grid */}
         <motion.div 
@@ -97,7 +102,7 @@ export default function Gallery() {
               whileHover={{ 
                 scale: 1.04,
                 y: -6,
-                transition: { type: "spring", stiffness: 300, damping: 20 }
+                transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
               }}
               onClick={() => setSelectedIdx(idx)}
               className="relative aspect-[3/4] sm:aspect-square overflow-hidden rounded-2xl border border-gold-200/30 dark:border-ink-700/30 shadow-md cursor-pointer group bg-cream-dark dark:bg-ink-950"
@@ -198,7 +203,7 @@ export default function Gallery() {
                   {galleryImages[selectedIdx].alt}
                 </p>
                 <p className="text-xs font-serif text-gold-400 italic mt-1">
-                  Ajis & Amel Wedding
+                  Mudjie & Anis Wedding
                 </p>
               </div>
 

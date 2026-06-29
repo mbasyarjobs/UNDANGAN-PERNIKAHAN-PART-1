@@ -132,10 +132,8 @@ export function BotanicalCrest({ className = '' }: OrnamentProps) {
 // 4. Large Elegant Floating Background Mandala
 export function FloatingMandala({ className = '' }: OrnamentProps) {
   return (
-    <motion.div
-      animate={{ rotate: 360 }}
-      transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-      className={`absolute w-72 h-72 sm:w-96 sm:h-96 pointer-events-none select-none z-0 opacity-[0.03] dark:opacity-[0.015] text-gold-600 dark:text-gold-400 ${className}`}
+    <div
+      className={`absolute w-72 h-72 sm:w-96 sm:h-96 pointer-events-none select-none z-0 opacity-[0.025] dark:opacity-[0.012] text-gold-600 dark:text-gold-400 animate-[spin_180s_linear_infinite] [will-change:transform] [transform:translate3d(0,0,0)] ${className}`}
     >
       <svg
         viewBox="0 0 200 200"
@@ -176,6 +174,6 @@ export function FloatingMandala({ className = '' }: OrnamentProps) {
           return <circle key={i} cx={cx} cy={cy} r="40" opacity="0.75" />;
         })}
       </svg>
-    </motion.div>
+    </div>
   );
 }

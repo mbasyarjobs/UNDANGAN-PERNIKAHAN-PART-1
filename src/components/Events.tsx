@@ -17,7 +17,13 @@ export default function Events() {
       <div className="max-w-4xl mx-auto relative z-10">
         
         {/* Header Title */}
-        <div className="text-center mb-16 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-16 flex flex-col items-center"
+        >
           <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Detail Acara
@@ -29,19 +35,19 @@ export default function Events() {
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 max-w-sm mx-auto">
             Dengan segala hormat, kami mengharapkan kehadiran Bapak/Ibu/Saudara/i untuk menyaksikan momen berharga ini.
           </p>
-        </div>
+        </motion.div>
 
         {/* Akad & Resepsi Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 px-2 max-w-3xl mx-auto">
           
           {/* Akad Nikah Card */}
           <motion.div
-            initial={{ opacity: 0, y: 40, scale: 0.97 }}
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ type: "spring", stiffness: 45, damping: 14 }}
-            whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 18 } }}
-            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:shadow-md hover:border-gold-400 dark:hover:border-gold-500 transition-all duration-300"
+            transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+            whileHover={{ y: -5, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }}
+            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:shadow-md hover:border-gold-400 dark:hover:border-gold-500 transition-all duration-350 ease-out"
           >
             {/* Soft decorative inner border */}
             <div className="absolute inset-4 border border-gold-300/10 dark:border-zinc-800/20 rounded-2xl pointer-events-none" />
@@ -101,12 +107,12 @@ export default function Events() {
 
           {/* Resepsi Card */}
           <motion.div
-            initial={{ opacity: 0, y: 40, scale: 0.97 }}
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ type: "spring", stiffness: 45, damping: 14, delay: 0.15 }}
-            whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 18 } }}
-            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:shadow-md hover:border-gold-400 dark:hover:border-gold-500 transition-all duration-300"
+            transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+            whileHover={{ y: -5, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }}
+            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:shadow-md hover:border-gold-400 dark:hover:border-gold-500 transition-all duration-350 ease-out"
           >
             {/* Soft decorative inner border */}
             <div className="absolute inset-4 border border-gold-300/10 dark:border-zinc-800/20 rounded-2xl pointer-events-none" />
@@ -168,20 +174,24 @@ export default function Events() {
 
         {/* Elegant Venue Image matching reference image under "LOKASI ACARA" */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           className="mt-16 rounded-3xl overflow-hidden border border-gold-200 dark:border-zinc-800 max-w-3xl mx-auto shadow-lg relative group"
         >
           {/* Glowing border outline */}
           <div className="absolute inset-0 border border-gold-400/10 pointer-events-none rounded-3xl z-10" />
           
-          <img
+          <motion.img
+            initial={{ scale: 1.12 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 3.2, ease: [0.16, 1, 0.3, 1] }}
             src={weddingImages.decor}
             alt="Wedding Reception Hall decoration"
             referrerPolicy="no-referrer"
-            className="w-full h-72 sm:h-96 object-cover group-hover:scale-[1.02] transition-transform duration-700 brightness-[0.95]"
+            className="w-full h-72 sm:h-96 object-cover group-hover:scale-[1.05] transition-transform duration-[6s] ease-out brightness-[0.95]"
           />
           
           {/* Subtle text details overlay */}

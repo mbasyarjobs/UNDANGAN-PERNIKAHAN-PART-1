@@ -17,17 +17,17 @@ export const weddingImages = {
 
 export const weddingInfo = {
   groom: {
-    nickname: 'Ajis',
-    fullName: 'Ajis Pratama',
+    nickname: 'Mudjie',
+    fullName: 'Mudjie Islamudin',
     parents: 'Putra Pertama dari Bapak Hadi Pratama & Ibu Sri Handayani',
-    instagram: 'ajispratama',
+    instagram: 'mudjie_islamudin',
     photo: groomImg,
   },
   bride: {
-    nickname: 'Amel',
-    fullName: 'Amel Zahrani',
+    nickname: 'Anis',
+    fullName: 'Anis Widya Septiani',
     parents: 'Putri Pertama dari Bapak Dedi Zulkarnain & Ibu Nur Aisyah',
-    instagram: 'amelzahrani',
+    instagram: 'anis_widya_s',
     photo: brideImg,
   },
   date: {
@@ -38,7 +38,7 @@ export const weddingInfo = {
     time: '08:00 WIB',
     isoString: '2026-06-28T08:00:00+07:00',
   },
-  hashtag: '#AjisAmelForever',
+  hashtag: '#MudjieAnisForever',
   musicUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Backup high-quality audio
   // We can use a direct royal-copyright-free wedding instrumental for "A Thousand Years" piano cover or similar,
   // let's use a beautiful, reliable piano instrumental MP3
@@ -53,7 +53,7 @@ export const weddingEvents: { akad: WeddingEvent; resepsi: WeddingEvent } = {
     locationName: 'Masjid Agung Al-Ikhlas',
     address: 'Jl. Merdeka No. 10, Jakarta Selatan',
     mapUrl: 'https://maps.google.com/?q=Masjid+Agung+Al-Ikhlas+Jl+Merdeka+No+10+Jakarta+Selatan',
-    calendarUrl: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Ajis+and+Amel&dates=20260628T010000Z/20260628T030000Z&details=Pernikahan+Ajis+and+Amel&location=Masjid+Agung+Al-Ikhlas,+Jl.+Merdeka+No.+10,+Jakarta+Selatan',
+    calendarUrl: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah+Mudjie+and+Anis&dates=20260628T010000Z/20260628T030000Z&details=Pernikahan+Mudjie+and+Anis&location=Masjid+Agung+Al-Ikhlas,+Jl.+Merdeka+No.+10,+Jakarta+Selatan',
   },
   resepsi: {
     title: 'Resepsi Pernikahan',
@@ -62,7 +62,7 @@ export const weddingEvents: { akad: WeddingEvent; resepsi: WeddingEvent } = {
     locationName: 'The Grand Ballroom',
     address: 'Jl. Sudirman No. 28, Jakarta Selatan',
     mapUrl: 'https://maps.google.com/?q=The+Grand+Ballroom+Jl+Sudirman+No+28+Jakarta+Selatan',
-    calendarUrl: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Pernikahan+Ajis+and+Amel&dates=20260628T040000Z/20260628T080000Z&details=Resepsi+Pernikahan+Ajis+and+Amel&location=The+Grand+Ballroom,+Jl.+Sudirman+No.+28,+Jakarta+Selatan',
+    calendarUrl: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Pernikahan+Mudjie+and+Anis&dates=20260628T040000Z/20260628T080000Z&details=Resepsi+Pernikahan+Mudjie+and+Anis&location=The+Grand+Ballroom,+Jl.+Sudirman+No.+28,+Jakarta+Selatan',
   },
 };
 
@@ -88,7 +88,7 @@ export const initialComments: Comment[] = [
   {
     id: 'c1',
     name: 'Andi & Keluarga',
-    message: 'Selamat menempuh hidup baru Ajis & Amel, semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Lancar dan berkah ya acaranya sampai hari H! Aamiin.',
+    message: 'Selamat menempuh hidup baru Mudjie & Anis, semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Lancar dan berkah ya acaranya sampai hari H! Aamiin.',
     timestamp: '2026-06-28T09:15:00Z',
     likes: 12,
   },
@@ -109,7 +109,7 @@ export const initialComments: Comment[] = [
   {
     id: 'c4',
     name: 'Hendra Setiawan',
-    message: 'Selamat bro Ajis! Mantap akhirnya sah. Semoga selalu diberkahi kemudahan dan kebahagiaan dalam melangkah bersama Amel.',
+    message: 'Selamat bro Mudjie! Mantap akhirnya sah. Semoga selalu diberkahi kemudahan dan kebahagiaan dalam melangkah bersama Anis.',
     timestamp: '2026-06-28T10:30:00Z',
     likes: 5,
   },
@@ -120,14 +120,14 @@ export const giftAccounts = [
     id: 'bca',
     bankName: 'BCA',
     accountNumber: '1234567890',
-    accountHolder: 'Ajis Pratama',
+    accountHolder: 'Mudjie Islamudin',
     logo: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=200&auto=format&fit=crop', // Abstract gold pattern card background
   },
   {
     id: 'mandiri',
     bankName: 'Bank Mandiri',
     accountNumber: '0987654321',
-    accountHolder: 'Amel Zahrani',
+    accountHolder: 'Anis Widya Septiani',
     logo: 'https://images.unsplash.com/photo-1628157582853-a796fa650a6a?q=80&w=200&auto=format&fit=crop',
   },
 ];

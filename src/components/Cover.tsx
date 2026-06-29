@@ -91,13 +91,13 @@ export default function Cover({ onOpen, isOpen }: CoverProps) {
 
           {/* Expanded & perfectly balanced responsive typography with a premium, warm charcoal tone */}
           <h1 className="text-[2.25rem] min-[375px]:text-[2.6rem] min-[410px]:text-[2.9rem] sm:text-[3.75rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem] font-serif text-[#2d2214] font-medium tracking-wide leading-[1.1] select-none flex flex-col items-center drop-shadow-[0_1px_1px_rgba(255,255,255,0.45)]">
-            <span>Ajis</span>
+            <span>Mudjie</span>
             <div className="flex items-center justify-center gap-3 sm:gap-4 w-full my-1 sm:my-2">
               <div className="h-[1px] w-8 sm:w-12 bg-[#2d2214]/15" />
               <span className="text-xl sm:text-2xl md:text-3xl font-serif italic text-[#a88340] select-none">&</span>
               <div className="h-[1px] w-8 sm:w-12 bg-[#2d2214]/15" />
             </div>
-            <span>Amel</span>
+            <span>Anis</span>
           </h1>
         </div>
       </motion.div>

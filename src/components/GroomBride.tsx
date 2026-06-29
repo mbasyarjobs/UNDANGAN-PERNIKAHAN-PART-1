@@ -21,7 +21,7 @@ export default function GroomBride() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16 px-4 flex flex-col items-center"
         >
           <BotanicalCrest />
@@ -45,33 +45,35 @@ export default function GroomBride() {
           
           {/* Groom Profile */}
           <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            initial={{ opacity: 0, y: 35, scale: 0.97 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ type: "spring", stiffness: 45, damping: 14 }}
+            transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col items-center group"
           >
             {/* Elegant Portrait Frame */}
             <motion.div 
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 200, damping: 18 }}
+              whileHover={{ scale: 1.025 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-52 h-52 sm:w-60 sm:h-60 mb-6"
             >
               {/* Outer Golden Arch Ring (slow spinning rotation) */}
-              <motion.div 
-                animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-[40px] border-2 border-dashed border-gold-400/30 scale-[1.04] group-hover:scale-[1.06] group-hover:border-gold-400/60 transition-all duration-500" 
+              <div 
+                className="absolute inset-0 rounded-[40px] border-2 border-dashed border-gold-400/30 scale-[1.04] group-hover:scale-[1.06] group-hover:border-gold-400/60 transition-all duration-[1000ms] ease-out animate-[spin_120s_linear_infinite]" 
               />
-              <div className="absolute inset-0 rounded-[40px] border border-gold-400/15 scale-[1.08] group-hover:scale-[1.12] transition-all duration-500" />
+              <div className="absolute inset-0 rounded-[40px] border border-gold-400/15 scale-[1.08] group-hover:scale-[1.12] transition-all duration-[1000ms] ease-out" />
               
               {/* Image Canvas with Curved Corners */}
               <div className="w-full h-full rounded-[40px] overflow-hidden border-2 border-white dark:border-zinc-900 shadow-xl relative z-10">
-                <img
+                <motion.img
+                  initial={{ scale: 1.15 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 3.0, ease: [0.16, 1, 0.3, 1] }}
                   src={groom.photo}
                   alt={groom.fullName}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-[1200ms] ease-out"
+                  className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-[1200ms] ease-out"
                 />
               </div>
             </motion.div>
@@ -112,33 +114,35 @@ export default function GroomBride() {
 
           {/* Bride Profile */}
           <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            initial={{ opacity: 0, y: 35, scale: 0.97 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ type: "spring", stiffness: 45, damping: 14, delay: 0.15 }}
+            transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
             className="flex flex-col items-center group"
           >
             {/* Elegant Portrait Frame */}
             <motion.div 
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 200, damping: 18 }}
+              whileHover={{ scale: 1.025 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-52 h-52 sm:w-60 sm:h-60 mb-6"
             >
               {/* Outer Golden Arch Ring (slow spinning rotation) */}
-              <motion.div 
-                animate={{ rotate: -360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-[40px] border-2 border-dashed border-gold-400/30 scale-[1.04] group-hover:scale-[1.06] group-hover:border-gold-400/60 transition-all duration-500" 
+              <div 
+                className="absolute inset-0 rounded-[40px] border-2 border-dashed border-gold-400/30 scale-[1.04] group-hover:scale-[1.06] group-hover:border-gold-400/60 transition-all duration-[1000ms] ease-out animate-[spin_120s_linear_infinite_reverse]" 
               />
-              <div className="absolute inset-0 rounded-[40px] border border-gold-400/15 scale-[1.08] group-hover:scale-[1.12] transition-all duration-500" />
+              <div className="absolute inset-0 rounded-[40px] border border-gold-400/15 scale-[1.08] group-hover:scale-[1.12] transition-all duration-[1000ms] ease-out" />
               
               {/* Image Canvas with Curved Corners */}
               <div className="w-full h-full rounded-[40px] overflow-hidden border-2 border-white dark:border-zinc-900 shadow-xl relative z-10">
-                <img
+                <motion.img
+                  initial={{ scale: 1.15 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 3.0, ease: [0.16, 1, 0.3, 1] }}
                   src={bride.photo}
                   alt={bride.fullName}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-[1200ms] ease-out"
+                  className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-[1200ms] ease-out"
                 />
               </div>
             </motion.div>

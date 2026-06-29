@@ -54,7 +54,13 @@ export default function RSVPForm() {
       <div className="max-w-md mx-auto relative z-10 flex flex-col items-center">
         
         {/* Section Header */}
-        <div className="text-center mb-12 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-12 flex flex-col items-center"
+        >
           <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             R S V P
@@ -66,10 +72,16 @@ export default function RSVPForm() {
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 px-4 leading-relaxed">
             Mohon konfirmasi kehadiran Anda sebelum <strong className="text-gold-600 dark:text-gold-400">15 Juni 2026</strong> untuk kenyamanan penyelenggaraan acara.
           </p>
-        </div>
+        </motion.div>
 
         {/* RSVP Card Frame */}
-        <div className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-md relative">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-md relative w-full"
+        >
           <AnimatePresence mode="wait">
             {!isSubmitted ? (
               <motion.form
@@ -201,7 +213,7 @@ export default function RSVPForm() {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
 
       </div>
     </section>

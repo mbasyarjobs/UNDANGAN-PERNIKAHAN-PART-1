@@ -25,7 +25,13 @@ export default function Gift() {
       <div className="max-w-xl mx-auto relative z-10 text-center">
         
         {/* Section Header */}
-        <div className="mb-12 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-12 flex flex-col items-center"
+        >
           <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Wedding Gift
@@ -37,17 +43,17 @@ export default function Gift() {
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 px-4 max-w-sm mx-auto leading-relaxed">
             Doa restu Anda adalah karunia terindah bagi kami. Namun, jika Anda ingin memberikan tanda kasih, dapat mengirimkannya melalui sarana berikut.
           </p>
-        </div>
+        </motion.div>
 
         {/* Gift Options Cards Grid */}
         <div className="space-y-6 max-w-md mx-auto px-2">
-          {giftAccounts.map((acc) => (
+          {giftAccounts.map((acc, index) => (
             <motion.div
               key={acc.id}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
               className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
             >
               {/* Premium Card Corner Accents */}
@@ -124,14 +130,14 @@ export default function Gift() {
                     Jl. Merdeka No. 10, Jakarta Selatan
                   </h4>
                   <span className="text-xs text-zinc-500 dark:text-zinc-400 block mt-0.5">
-                    Penerima: Ajis & Amel
+                    Penerima: Mudjie & Anis
                   </span>
                 </div>
               </div>
 
               {/* Copy Address button */}
               <button
-                onClick={() => handleCopy('address', 'Jl. Merdeka No. 10, Jakarta Selatan (Penerima: Ajis & Amel)')}
+                onClick={() => handleCopy('address', 'Jl. Merdeka No. 10, Jakarta Selatan (Penerima: Mudjie & Anis)')}
                 className={`flex items-center justify-center gap-1.5 px-4 py-2 rounded-full border transition-all text-xs font-sans font-semibold uppercase tracking-wider cursor-pointer ${
                   copiedId === 'address'
                     ? 'bg-emerald-50 text-emerald-600 border-emerald-200 dark:bg-emerald-950/20 dark:text-emerald-400 dark:border-emerald-900/40'
