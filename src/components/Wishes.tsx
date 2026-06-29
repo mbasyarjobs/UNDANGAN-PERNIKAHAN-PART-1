@@ -115,7 +115,7 @@ export default function Wishes() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm max-w-lg mx-auto mb-12"
+          className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-gold-300/30 dark:border-gold-500/25 shadow-sm max-w-lg mx-auto mb-12"
         >
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col text-left">
@@ -129,7 +129,7 @@ export default function Wishes() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 placeholder="Masukkan nama Anda..."
-                className="px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-ink-700/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm"
+                className="px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-gold-500/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm"
               />
             </div>
 
@@ -144,7 +144,7 @@ export default function Wishes() {
                 required
                 rows={4}
                 placeholder="Tulis ucapan dan doa Anda..."
-                className="px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-ink-700/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm resize-none"
+                className="px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-gold-500/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm resize-none"
               />
             </div>
 
@@ -191,7 +191,7 @@ export default function Wishes() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl p-5 border border-gold-300/20 dark:border-ink-700/20 shadow-sm relative group hover:border-gold-300 dark:hover:border-zinc-700 transition-colors"
+                  className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl p-5 border border-gold-300/20 dark:border-gold-500/15 shadow-sm relative group hover:border-gold-300 dark:hover:border-gold-500/40 transition-colors"
                 >
                   {/* Top Header inside wish card */}
                   <div className="flex items-start justify-between gap-4 mb-2">

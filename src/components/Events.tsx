@@ -47,15 +47,15 @@ export default function Events() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
             whileHover={{ y: -5, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }}
-            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:shadow-md hover:border-gold-400 dark:hover:border-gold-500 transition-all duration-350 ease-out"
+            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-8 border border-gold-300/30 dark:border-gold-500/25 shadow-sm relative overflow-hidden group hover:shadow-md hover:border-gold-400 dark:hover:border-gold-500 transition-all duration-350 ease-out"
           >
             {/* Soft decorative inner border */}
-            <div className="absolute inset-4 border border-gold-300/10 dark:border-zinc-800/20 rounded-2xl pointer-events-none" />
+            <div className="absolute inset-4 border border-gold-300/10 dark:border-gold-500/10 rounded-2xl pointer-events-none" />
             <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-gold-500/5 to-transparent rounded-bl-3xl" />
 
             <div className="text-center relative z-10 flex flex-col items-center">
               {/* Event Icon */}
-              <div className="w-12 h-12 rounded-full bg-gold-100/50 dark:bg-gold-950/40 flex items-center justify-center text-gold-600 dark:text-gold-400 mb-6 border border-gold-200 dark:border-zinc-800">
+              <div className="w-12 h-12 rounded-full bg-gold-100/50 dark:bg-gold-950/40 flex items-center justify-center text-gold-600 dark:text-gold-400 mb-6 border border-gold-200 dark:border-gold-500/30">
                 <span className="text-xl">💍</span>
               </div>
 
@@ -97,7 +97,7 @@ export default function Events() {
                   href={akad.calendarUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border border-gold-300/40 dark:border-ink-700/50 text-zinc-700 dark:text-zinc-300 hover:bg-gold-100/50 dark:hover:bg-zinc-800 transition-colors text-xs font-sans font-semibold tracking-wider uppercase"
+                  className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border border-gold-300/40 dark:border-gold-500/30 text-zinc-700 dark:text-zinc-300 hover:bg-gold-100/50 dark:hover:bg-zinc-800 transition-colors text-xs font-sans font-semibold tracking-wider uppercase"
                 >
                   Save Date
                 </a>
@@ -112,15 +112,15 @@ export default function Events() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
             whileHover={{ y: -5, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }}
-            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:shadow-md hover:border-gold-400 dark:hover:border-gold-500 transition-all duration-350 ease-out"
+            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-8 border border-gold-300/30 dark:border-gold-500/25 shadow-sm relative overflow-hidden group hover:shadow-md hover:border-gold-400 dark:hover:border-gold-500 transition-all duration-350 ease-out"
           >
             {/* Soft decorative inner border */}
-            <div className="absolute inset-4 border border-gold-300/10 dark:border-zinc-800/20 rounded-2xl pointer-events-none" />
+            <div className="absolute inset-4 border border-gold-300/10 dark:border-gold-500/10 rounded-2xl pointer-events-none" />
             <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-gold-500/5 to-transparent rounded-bl-3xl" />
 
             <div className="text-center relative z-10 flex flex-col items-center">
               {/* Event Icon */}
-              <div className="w-12 h-12 rounded-full bg-gold-100/50 dark:bg-gold-950/40 flex items-center justify-center text-gold-600 dark:text-gold-400 mb-6 border border-gold-200 dark:border-zinc-800">
+              <div className="w-12 h-12 rounded-full bg-gold-100/50 dark:bg-gold-950/40 flex items-center justify-center text-gold-600 dark:text-gold-400 mb-6 border border-gold-200 dark:border-gold-500/30">
                 <span className="text-xl">🥂</span>
               </div>
 
@@ -162,7 +162,7 @@ export default function Events() {
                   href={resepsi.calendarUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border border-gold-300/40 dark:border-ink-700/50 text-zinc-700 dark:text-zinc-300 hover:bg-gold-100/50 dark:hover:bg-zinc-800 transition-colors text-xs font-sans font-semibold tracking-wider uppercase"
+                  className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full border border-gold-300/40 dark:border-gold-500/30 text-zinc-700 dark:text-zinc-300 hover:bg-gold-100/50 dark:hover:bg-zinc-800 transition-colors text-xs font-sans font-semibold tracking-wider uppercase"
                 >
                   Save Date
                 </a>
@@ -178,7 +178,7 @@ export default function Events() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-          className="mt-16 rounded-3xl overflow-hidden border border-gold-200 dark:border-zinc-800 max-w-3xl mx-auto shadow-lg relative group"
+          className="mt-16 rounded-3xl overflow-hidden border border-gold-200 dark:border-gold-500/30 max-w-3xl mx-auto shadow-lg relative group"
         >
           {/* Glowing border outline */}
           <div className="absolute inset-0 border border-gold-400/10 pointer-events-none rounded-3xl z-10" />

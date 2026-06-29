@@ -64,7 +64,7 @@ export default function GroomBride() {
               <div className="absolute inset-0 rounded-[40px] border border-gold-400/15 scale-[1.08] group-hover:scale-[1.12] transition-all duration-[1000ms] ease-out" />
               
               {/* Image Canvas with Curved Corners */}
-              <div className="w-full h-full rounded-[40px] overflow-hidden border-2 border-white dark:border-zinc-900 shadow-xl relative z-10">
+              <div className="w-full h-full rounded-[40px] overflow-hidden border-2 border-white dark:border-gold-500/40 shadow-xl relative z-10">
                 <motion.img
                   initial={{ scale: 1.15 }}
                   whileInView={{ scale: 1 }}
@@ -133,7 +133,7 @@ export default function GroomBride() {
               <div className="absolute inset-0 rounded-[40px] border border-gold-400/15 scale-[1.08] group-hover:scale-[1.12] transition-all duration-[1000ms] ease-out" />
               
               {/* Image Canvas with Curved Corners */}
-              <div className="w-full h-full rounded-[40px] overflow-hidden border-2 border-white dark:border-zinc-900 shadow-xl relative z-10">
+              <div className="w-full h-full rounded-[40px] overflow-hidden border-2 border-white dark:border-gold-500/40 shadow-xl relative z-10">
                 <motion.img
                   initial={{ scale: 1.15 }}
                   whileInView={{ scale: 1 }}

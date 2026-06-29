@@ -80,7 +80,7 @@ export default function RSVPForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-gold-300/30 dark:border-ink-700/30 shadow-md relative w-full"
+          className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-gold-300/30 dark:border-gold-500/25 shadow-md relative w-full"
         >
           <AnimatePresence mode="wait">
             {!isSubmitted ? (
@@ -103,7 +103,7 @@ export default function RSVPForm() {
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
                     placeholder="Masukkan nama Anda..."
-                    className="px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-ink-700/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm"
+                    className="px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-gold-500/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm"
                   />
                 </div>
 
@@ -117,7 +117,7 @@ export default function RSVPForm() {
                       id="attendance"
                       value={formData.attendance}
                       onChange={(e) => setFormData({ ...formData, attendance: e.target.value })}
-                      className="w-full px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-ink-700/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm appearance-none cursor-pointer"
+                      className="w-full px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-gold-500/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm appearance-none cursor-pointer"
                     >
                       <option value="hadir" className="bg-cream dark:bg-ink-950 text-ink-900 dark:text-gold-50">✓ Hadir dengan senang hati</option>
                       <option value="tidak" className="bg-cream dark:bg-ink-950 text-ink-900 dark:text-gold-50">✗ Maaf, Berhalangan hadir</option>
@@ -147,7 +147,7 @@ export default function RSVPForm() {
                         id="guests"
                         value={formData.guests}
                         onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                        className="w-full px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-ink-700/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 bg-white/50 dark:bg-ink-900/80 border border-gold-300/30 dark:border-gold-500/30 rounded-xl font-sans text-sm text-ink-900 dark:text-gold-50 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all shadow-sm appearance-none cursor-pointer"
                       >
                         <option value="1" className="bg-cream dark:bg-ink-950 text-ink-900 dark:text-gold-50">1 Orang (Hanya Saya)</option>
                         <option value="2" className="bg-cream dark:bg-ink-950 text-ink-900 dark:text-gold-50">2 Orang (Dengan Pasangan)</option>

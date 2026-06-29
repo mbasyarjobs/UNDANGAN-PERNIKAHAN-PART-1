@@ -1,22 +1,8 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Heart } from 'lucide-react';
 import { weddingInfo, weddingImages } from '../data';
 import { CornerOrnament, HeaderDivider, FloatingMandala } from './Ornaments';
 
 export default function Opening() {
-  const [guestName, setGuestName] = useState('Bapak/Ibu/Saudara/i');
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      const to = params.get('to');
-      if (to) {
-        setGuestName(decodeURIComponent(to));
-      }
-    }
-  }, []);
-
   return (
     <section id="opening-welcome" className="relative pt-24 pb-20 px-6 bg-transparent overflow-hidden text-center flex flex-col items-center">
       
@@ -56,19 +42,9 @@ export default function Opening() {
           transition={{ duration: 2.0, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="space-y-4 px-2"
         >
-          <p className="text-xs sm:text-sm font-sans text-zinc-500 dark:text-zinc-400 tracking-wider">
-            Kepada Yth.
-          </p>
-          <h3 className="text-xl sm:text-2xl font-serif font-bold text-zinc-800 dark:text-zinc-200">
-            {guestName}
-          </h3>
-          <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 italic">
-            di tempat
-          </p>
-
           <div className="py-4">
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-sans max-w-md mx-auto">
-              Tanpa mengurangi rasa hormat, dengan penuh syukur kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri perayaan pernikahan putra-putri kami:
+              Dengan penuh syukur kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri perayaan pernikahan putra-putri kami:
             </p>
           </div>
         </motion.div>
@@ -79,7 +55,7 @@ export default function Opening() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-          className="relative w-full max-w-sm mx-auto aspect-[16/10] rounded-2xl overflow-hidden border border-gold-200/50 dark:border-zinc-800 shadow-lg group"
+          className="relative w-full max-w-sm mx-auto aspect-[16/10] rounded-2xl overflow-hidden border border-gold-200/50 dark:border-gold-500/30 shadow-lg group"
         >
           {/* Subtle gold line border inside */}
           <div className="absolute inset-2.5 border border-gold-300/20 rounded-xl pointer-events-none z-10" />

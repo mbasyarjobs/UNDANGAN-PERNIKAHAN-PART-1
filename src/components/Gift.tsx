@@ -54,7 +54,7 @@ export default function Gift() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
-              className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
+              className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 border border-gold-300/30 dark:border-gold-500/25 shadow-sm relative overflow-hidden group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
             >
               {/* Premium Card Corner Accents */}
               <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-gold-500/5 to-transparent rounded-tl-3xl" />
@@ -62,7 +62,7 @@ export default function Gift() {
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left relative z-10">
                 <div className="flex items-center gap-4">
                   {/* Custom Bank Icon Frame */}
-                  <div className="w-12 h-12 rounded-2xl bg-white dark:bg-ink-900 border border-gold-200/30 dark:border-zinc-800 flex items-center justify-center shadow-inner text-gold-600 dark:text-gold-400">
+                  <div className="w-12 h-12 rounded-2xl bg-white dark:bg-ink-900 border border-gold-200/30 dark:border-gold-500/30 flex items-center justify-center shadow-inner text-gold-600 dark:text-gold-400">
                     <CreditCard className="w-6 h-6" />
                   </div>
 
@@ -86,7 +86,7 @@ export default function Gift() {
                   className={`flex items-center justify-center gap-1.5 px-4 py-2 rounded-full border transition-all text-xs font-sans font-semibold uppercase tracking-wider cursor-pointer ${
                     copiedId === acc.id
                       ? 'bg-emerald-50 text-emerald-600 border-emerald-200 dark:bg-emerald-950/20 dark:text-emerald-400 dark:border-emerald-900/40'
-                      : 'bg-white/50 text-zinc-700 border-gold-300/40 hover:bg-gold-500 hover:text-white hover:border-gold-500 dark:bg-ink-900 dark:text-gold-200 dark:border-ink-700/40 dark:hover:bg-gold-500 dark:hover:text-white'
+                      : 'bg-white/50 text-zinc-700 border-gold-300/40 hover:bg-gold-500 hover:text-white hover:border-gold-500 dark:bg-ink-900 dark:text-gold-200 dark:border-gold-500/30 dark:hover:bg-gold-500 dark:hover:text-white'
                   }`}
                 >
                   {copiedId === acc.id ? (
@@ -111,14 +111,14 @@ export default function Gift() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative overflow-hidden group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
+            className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-3xl p-6 border border-gold-300/30 dark:border-gold-500/25 shadow-sm relative overflow-hidden group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
           >
             <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-gold-500/5 to-transparent rounded-tl-3xl" />
             
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left relative z-10">
               <div className="flex items-center gap-4 flex-1">
                 {/* Custom Map Pin Icon Frame */}
-                <div className="w-12 h-12 rounded-2xl bg-white dark:bg-ink-900 border border-gold-200/30 dark:border-zinc-800 flex items-center justify-center shadow-inner text-gold-600 dark:text-gold-400">
+                <div className="w-12 h-12 rounded-2xl bg-white dark:bg-ink-900 border border-gold-200/30 dark:border-gold-500/30 flex items-center justify-center shadow-inner text-gold-600 dark:text-gold-400">
                   <MapPin className="w-6 h-6" />
                 </div>
 
@@ -141,7 +141,7 @@ export default function Gift() {
                 className={`flex items-center justify-center gap-1.5 px-4 py-2 rounded-full border transition-all text-xs font-sans font-semibold uppercase tracking-wider cursor-pointer ${
                   copiedId === 'address'
                     ? 'bg-emerald-50 text-emerald-600 border-emerald-200 dark:bg-emerald-950/20 dark:text-emerald-400 dark:border-emerald-900/40'
-                    : 'bg-white/50 text-zinc-700 border-gold-300/40 hover:bg-gold-500 hover:text-white hover:border-gold-500 dark:bg-ink-900 dark:text-gold-200 dark:border-ink-700/40 dark:hover:bg-gold-500 dark:hover:text-white'
+                    : 'bg-white/50 text-zinc-700 border-gold-300/40 hover:bg-gold-500 hover:text-white hover:border-gold-500 dark:bg-ink-900 dark:text-gold-200 dark:border-gold-500/30 dark:hover:bg-gold-500 dark:hover:text-white'
                 }`}
               >
                 {copiedId === 'address' ? (

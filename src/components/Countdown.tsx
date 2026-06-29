@@ -85,7 +85,7 @@ export default function Countdown() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 2.0, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
-              className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl border border-gold-300/30 dark:border-ink-700/30 shadow-sm p-3 flex flex-col justify-center items-center relative overflow-hidden group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
+              className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl border border-gold-300/30 dark:border-gold-500/25 shadow-sm p-3 flex flex-col justify-center items-center relative overflow-hidden group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
             >
               {/* Soft gold hover glow */}
               <div className="absolute inset-0 bg-gradient-to-tr from-gold-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

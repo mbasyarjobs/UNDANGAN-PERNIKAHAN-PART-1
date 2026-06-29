@@ -33,7 +33,7 @@ export default function Timeline() {
         </motion.div>
 
         {/* Vertical Timeline */}
-        <div className="relative border-l border-gold-300/40 dark:border-zinc-800 ml-4 sm:ml-6 md:mx-auto md:border-l-0 md:before:absolute md:before:left-1/2 md:before:top-0 md:before:h-full md:before:w-[1px] md:before:bg-gold-300/40 md:before:dark:bg-zinc-800">
+        <div className="relative border-l border-gold-300/40 dark:border-gold-500/20 ml-4 sm:ml-6 md:mx-auto md:border-l-0 md:before:absolute md:before:left-1/2 md:before:top-0 md:before:h-full md:before:w-[1px] md:before:bg-gold-300/40 md:before:dark:bg-gold-500/20">
           
           {loveStories.map((story, index) => {
             const isEven = index % 2 === 0;
@@ -41,7 +41,7 @@ export default function Timeline() {
               <div key={story.year} className="relative mb-12 last:mb-0 md:flex md:justify-between items-center group">
                 
                 {/* Timeline Node / Circle Indicator */}
-                <div className="absolute left-[-17px] top-1.5 md:left-1/2 md:ml-[-13px] md:top-2.5 z-10 flex items-center justify-center w-8 h-8 rounded-full bg-cream dark:bg-ink-950 border border-gold-300 dark:border-ink-700 shadow-md group-hover:border-gold-500 group-hover:scale-110 transition-all duration-300">
+                <div className="absolute left-[-17px] top-1.5 md:left-1/2 md:ml-[-13px] md:top-2.5 z-10 flex items-center justify-center w-8 h-8 rounded-full bg-cream dark:bg-ink-950 border border-gold-300 dark:border-gold-500/40 shadow-md group-hover:border-gold-500 group-hover:scale-110 transition-all duration-300">
                   <Heart className="w-3 h-3 text-gold-500 fill-gold-500/20 group-hover:fill-gold-500 group-hover:text-gold-600 transition-colors" />
                 </div>
 
@@ -52,7 +52,7 @@ export default function Timeline() {
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
-                    className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl p-6 border border-gold-300/30 dark:border-ink-700/30 shadow-sm relative group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
+                    className="bg-white/70 dark:bg-ink-950/40 backdrop-blur-md rounded-2xl p-6 border border-gold-300/30 dark:border-gold-500/25 shadow-sm relative group hover:border-gold-400 dark:hover:border-gold-500 transition-colors"
                   >
                     {/* Decorative Card Light Spot */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-gold-500/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />

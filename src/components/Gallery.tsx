@@ -105,7 +105,7 @@ export default function Gallery() {
                 transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
               }}
               onClick={() => setSelectedIdx(idx)}
-              className="relative aspect-[3/4] sm:aspect-square overflow-hidden rounded-2xl border border-gold-200/30 dark:border-ink-700/30 shadow-md cursor-pointer group bg-cream-dark dark:bg-ink-950"
+              className="relative aspect-[3/4] sm:aspect-square overflow-hidden rounded-2xl border border-gold-200/30 dark:border-gold-500/25 shadow-md cursor-pointer group bg-cream-dark dark:bg-ink-950"
             >
               <img
                 src={img.src}
