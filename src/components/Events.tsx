@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { MapPin, Calendar, Clock, Map } from 'lucide-react';
 import { weddingEvents, weddingImages } from '../data';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function Events() {
   const { akad, resepsi } = weddingEvents;
@@ -8,18 +9,23 @@ export default function Events() {
   return (
     <section id="events-section" className="py-20 px-4 bg-transparent relative overflow-hidden">
       {/* Decorative Gold Elements */}
+      <CornerOrnament position="top-left" />
+      <CornerOrnament position="top-right" />
+      <FloatingMandala className="top-1/3 left-1/2 -translate-x-1/2" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-gold-200/5 dark:bg-gold-500/[0.01] blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto relative z-10">
         
         {/* Header Title */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 flex flex-col items-center">
+          <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Detail Acara
           </span>
           <h2 className="text-3xl font-serif text-ink-900 dark:text-gold-100 font-medium">
             Waktu & Tempat
           </h2>
+          <HeaderDivider className="mt-2" />
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 max-w-sm mx-auto">
             Dengan segala hormat, kami mengharapkan kehadiran Bapak/Ibu/Saudara/i untuk menyaksikan momen berharga ini.
           </p>

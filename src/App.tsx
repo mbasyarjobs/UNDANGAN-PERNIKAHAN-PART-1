@@ -79,7 +79,7 @@ export default function App() {
       <div className="absolute inset-0 bg-pattern opacity-[0.04] pointer-events-none select-none z-0" />
 
       {/* 1. Interactive Theme Toggle floating in upper right */}
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      {isOpen && <ThemeToggle theme={theme} toggleTheme={toggleTheme} />}
 
       {/* 2. Floating Audio Player in bottom-left */}
       <AudioPlayer isPlaying={isPlaying} setIsPlaying={setIsPlaying} shouldPlay={isOpen} />

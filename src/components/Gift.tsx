@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Gift as GiftIcon, Copy, Check, MapPin, CreditCard } from 'lucide-react';
 import { giftAccounts } from '../data';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function Gift() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -16,19 +17,23 @@ export default function Gift() {
 
   return (
     <section id="gift-section" className="py-20 px-4 bg-transparent relative overflow-hidden">
-      {/* Gentle Gold Glow Spot */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-gold-400/[0.03] rounded-full blur-3xl pointer-events-none" />
+      {/* Background Ornaments */}
+      <CornerOrnament position="top-left" />
+      <CornerOrnament position="bottom-right" />
+      <FloatingMandala className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-xl mx-auto relative z-10 text-center">
         
         {/* Section Header */}
-        <div className="mb-12">
+        <div className="mb-12 flex flex-col items-center">
+          <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Wedding Gift
           </span>
           <h2 className="text-3xl font-serif text-ink-900 dark:text-gold-100 font-medium">
             Kado Digital
           </h2>
+          <HeaderDivider className="mt-2" />
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 px-4 max-w-sm mx-auto leading-relaxed">
             Doa restu Anda adalah karunia terindah bagi kami. Namun, jika Anda ingin memberikan tanda kasih, dapat mengirimkannya melalui sarana berikut.
           </p>

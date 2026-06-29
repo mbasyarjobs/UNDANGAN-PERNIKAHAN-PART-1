@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Instagram, Send } from 'lucide-react';
 import { weddingInfo } from '../data';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function GroomBride() {
   const groom = weddingInfo.groom;
@@ -8,17 +9,11 @@ export default function GroomBride() {
 
   return (
     <section id="mempelai-section" className="py-20 px-4 bg-transparent relative overflow-hidden">
-      {/* Background patterns */}
-      <div className="absolute top-10 right-0 w-48 h-48 opacity-5 pointer-events-none select-none dark:opacity-[0.02]">
-        <svg viewBox="0 0 100 100" fill="currentColor" className="text-gold-500">
-          <path d="M50,0 C65,20 80,40 100,50 C80,60 65,80 50,100 C35,80 20,60 0,50 C20,40 35,20 50,0 Z" />
-        </svg>
-      </div>
-      <div className="absolute bottom-10 left-0 w-48 h-48 opacity-5 pointer-events-none select-none dark:opacity-[0.02]">
-        <svg viewBox="0 0 100 100" fill="currentColor" className="text-gold-500">
-          <path d="M50,0 C65,20 80,40 100,50 C80,60 65,80 50,100 C35,80 20,60 0,50 C20,40 35,20 50,0 Z" />
-        </svg>
-      </div>
+      {/* Background Ornaments */}
+      <CornerOrnament position="bottom-left" />
+      <CornerOrnament position="bottom-right" />
+      <FloatingMandala className="top-1/4 left-1/4" />
+      <FloatingMandala className="bottom-1/4 right-1/4" />
 
       <div className="max-w-2xl mx-auto text-center relative z-10">
         {/* Header section with Surah Quote */}
@@ -27,14 +22,16 @@ export default function GroomBride() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 1 }}
-          className="mb-16 px-4"
+          className="mb-16 px-4 flex flex-col items-center"
         >
+          <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Mempelai
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif text-zinc-900 dark:text-zinc-100 mb-6 font-medium">
+          <h2 className="text-3xl sm:text-4xl font-serif text-zinc-900 dark:text-zinc-100 mb-4 font-medium">
             Maha Suci Allah
           </h2>
+          <HeaderDivider className="mb-6" />
           <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-sans italic leading-relaxed max-w-lg mx-auto relative px-6 py-4 rounded-2xl bg-gold-50/30 dark:bg-zinc-900/10 border border-gold-200/20">
             "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
             <span className="block mt-3 text-[10px] font-sans font-bold tracking-wider text-gold-600 dark:text-gold-400 uppercase not-italic">

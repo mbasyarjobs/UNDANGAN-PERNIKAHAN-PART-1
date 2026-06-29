@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { MessageSquare, Heart, Send } from 'lucide-react';
 import { Comment } from '../types';
 import { initialComments } from '../data';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function Wishes() {
   const [comments, setComments] = useState<Comment[]>([]);
@@ -80,23 +81,23 @@ export default function Wishes() {
 
   return (
     <section id="wishes-section" className="py-20 px-4 bg-transparent relative overflow-hidden">
-      {/* Decorative ornaments */}
-      <div className="absolute bottom-0 left-0 w-32 h-32 opacity-[0.04] pointer-events-none select-none">
-        <svg viewBox="0 0 100 100" fill="currentColor" className="text-gold-500">
-          <path d="M0,100 C20,70 50,60 100,50 C70,40 60,20 50,0 C40,20 30,40 0,50 C30,60 20,70 0,100 Z" />
-        </svg>
-      </div>
+      {/* Premium Corner Ornaments */}
+      <CornerOrnament position="top-right" />
+      <CornerOrnament position="bottom-left" />
+      <FloatingMandala className="bottom-1/4 right-10" />
 
       <div className="max-w-2xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 flex flex-col items-center">
+          <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Doa Restu
           </span>
           <h2 className="text-3xl font-serif text-ink-900 dark:text-gold-100 font-medium">
             Ucapan & Doa
           </h2>
+          <HeaderDivider className="mt-2" />
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 px-4">
             Berikan ucapan selamat, harapan, serta doa terbaik Anda untuk mengiringi langkah baru pernikahan kami.
           </p>

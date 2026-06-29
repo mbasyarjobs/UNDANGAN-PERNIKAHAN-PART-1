@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Heart, Share2, Instagram, MessageCircle } from 'lucide-react';
 import { weddingInfo } from '../data';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function Footer() {
   const handleShare = () => {
@@ -20,12 +21,12 @@ export default function Footer() {
   return (
     <footer id="wedding-footer" className="relative py-20 px-6 bg-transparent overflow-hidden text-center border-t border-gold-200/30 dark:border-zinc-900/50">
       
-      {/* Decorative Ornaments */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent" />
+      {/* Premium Corner Ornaments */}
+      <CornerOrnament position="top-left" />
+      <CornerOrnament position="top-right" />
+      <FloatingMandala className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
       
-      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-gold-400/[0.02] rounded-full blur-3xl pointer-events-none" />
-
-      <div className="max-w-md mx-auto relative z-10 space-y-8">
+      <div className="max-w-md mx-auto relative z-10 space-y-8 flex flex-col items-center">
         
         {/* Heart icon */}
         <div className="flex justify-center">
@@ -56,15 +57,17 @@ export default function Footer() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="space-y-2"
+          className="space-y-2 flex flex-col items-center"
         >
+          <BotanicalCrest />
           <h3 className="text-4xl sm:text-5xl font-script text-gold-600 dark:text-gold-400 tracking-wide select-none">
             Terima Kasih
           </h3>
           <h4 className="text-xl font-serif font-semibold text-ink-900 dark:text-gold-100 mt-2">
             {weddingInfo.groom.nickname} & {weddingInfo.bride.nickname}
           </h4>
-          <p className="text-xs font-sans tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mt-1 uppercase font-medium">
+          <HeaderDivider className="my-3" />
+          <p className="text-xs font-sans tracking-[0.25em] text-zinc-400 dark:text-zinc-500 mt-1 uppercase font-medium">
             {weddingInfo.date.day} . {weddingInfo.date.month.toUpperCase()} . {weddingInfo.date.year}
           </p>
           <span className="inline-block mt-3 px-4 py-1 rounded-full bg-gold-100 dark:bg-gold-900/10 border border-gold-200/20 text-gold-600 dark:text-gold-400 font-mono text-xs font-semibold tracking-wider">

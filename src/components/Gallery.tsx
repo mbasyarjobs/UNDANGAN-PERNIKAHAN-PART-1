@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import { weddingImages } from '../data';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function Gallery() {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
@@ -59,16 +60,23 @@ export default function Gallery() {
 
   return (
     <section id="gallery-section" className="py-20 px-4 bg-transparent relative overflow-hidden">
+      {/* Background Ornaments */}
+      <CornerOrnament position="bottom-left" />
+      <CornerOrnament position="bottom-right" />
+      <FloatingMandala className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+
       <div className="max-w-4xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 flex flex-col items-center">
+          <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Momen Bahagia
           </span>
           <h2 className="text-3xl font-serif text-ink-900 dark:text-gold-100 font-medium">
             Galeri Foto
           </h2>
+          <HeaderDivider className="mt-2" />
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 max-w-sm mx-auto">
             Goresan kebahagiaan dan kehangatan kebersamaan kami yang terekam dalam lensa.
           </p>

@@ -1,25 +1,26 @@
 import { motion } from 'motion/react';
 import { Heart } from 'lucide-react';
 import { loveStories } from '../data';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function Timeline() {
   return (
     <section id="timeline-section" className="py-20 px-4 bg-transparent relative overflow-hidden">
-      {/* Delicate background watercolor leaf pattern (custom CSS or SVG) */}
-      <div className="absolute top-1/2 left-10 -translate-y-1/2 w-64 h-64 opacity-[0.03] pointer-events-none select-none dark:opacity-[0.01]">
-        <svg viewBox="0 0 120 120" fill="currentColor" className="text-gold-600">
-          <path d="M60,10 C70,40 100,50 110,60 C100,70 70,80 60,110 C50,80 20,70 10,60 C20,50 50,40 60,10 Z" />
-        </svg>
-      </div>
+      {/* Background Ornaments */}
+      <CornerOrnament position="top-right" />
+      <CornerOrnament position="bottom-left" />
+      <FloatingMandala className="top-1/3 left-10" />
 
       <div className="max-w-2xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 flex flex-col items-center">
+          <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             Momen Spesial
           </span>
           <h2 className="text-3xl font-serif text-ink-900 dark:text-gold-100 font-medium">
             Kisah Cinta Kami
           </h2>
+          <HeaderDivider className="mt-2" />
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 max-w-sm mx-auto">
             Bagaimana petualangan indah ini bermula hingga kami dipersatukan dalam komitmen suci.
           </p>

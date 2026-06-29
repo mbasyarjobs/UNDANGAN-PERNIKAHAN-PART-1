@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Heart } from 'lucide-react';
 import { weddingInfo, weddingImages } from '../data';
+import { CornerOrnament, HeaderDivider, FloatingMandala } from './Ornaments';
 
 export default function Opening() {
   const [guestName, setGuestName] = useState('Bapak/Ibu/Saudara/i');
@@ -19,18 +20,12 @@ export default function Opening() {
   return (
     <section id="opening-welcome" className="relative pt-24 pb-20 px-6 bg-transparent overflow-hidden text-center flex flex-col items-center">
       
-      {/* Absolute floating petals or leaves ornaments */}
-      <div className="absolute top-4 left-4 w-24 h-24 sm:w-32 sm:h-32 opacity-10 pointer-events-none select-none dark:opacity-[0.03]">
-        {/* Soft gold organic floral leaf SVG path */}
-        <svg viewBox="0 0 100 100" fill="currentColor" className="text-gold-600">
-          <path d="M0,0 C20,10 40,30 50,50 C30,40 10,20 0,0 Z M50,50 C60,70 80,90 100,100 C90,80 70,60 50,50 Z" />
-        </svg>
-      </div>
-      <div className="absolute top-4 right-4 w-24 h-24 sm:w-32 sm:h-32 opacity-10 pointer-events-none select-none dark:opacity-[0.03] scale-x-[-1]">
-        <svg viewBox="0 0 100 100" fill="currentColor" className="text-gold-600">
-          <path d="M0,0 C20,10 40,30 50,50 C30,40 10,20 0,0 Z M50,50 C60,70 80,90 100,100 C90,80 70,60 50,50 Z" />
-        </svg>
-      </div>
+      {/* Premium Corner Ornaments */}
+      <CornerOrnament position="top-left" />
+      <CornerOrnament position="top-right" />
+      
+      {/* Floating Background Mandala */}
+      <FloatingMandala className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-xl mx-auto relative z-10 space-y-6">
         
@@ -50,11 +45,7 @@ export default function Opening() {
             {weddingInfo.groom.nickname} & {weddingInfo.bride.nickname}
           </h2>
           
-          <div className="flex items-center gap-2 mt-4">
-            <div className="h-[1px] w-12 bg-gold-400/30" />
-            <Heart className="w-4 h-4 text-gold-500 fill-gold-500/10 animate-pulse" />
-            <div className="h-[1px] w-12 bg-gold-400/30" />
-          </div>
+          <HeaderDivider className="mt-2" />
         </motion.div>
 
         {/* Invitation Message */}

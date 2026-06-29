@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Calendar, Clock } from 'lucide-react';
 import { weddingInfo } from '../data';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -50,14 +51,13 @@ export default function Countdown() {
 
   return (
     <section id="countdown-section" className="py-16 px-4 bg-gold-100/10 dark:bg-ink-950/20 text-center relative overflow-hidden border-t border-b border-gold-200/20 dark:border-ink-700/20">
-      {/* Decorative floral backgrounds */}
-      <div className="absolute top-0 left-0 w-32 h-32 opacity-10 pointer-events-none select-none dark:opacity-5">
-        <svg viewBox="0 0 100 100" fill="currentColor" className="text-gold-600">
-          <path d="M0,0 C30,10 70,10 100,0 C90,30 90,70 100,100 C70,90 30,90 0,100 C10,70 10,30 0,0 Z" />
-        </svg>
-      </div>
+      {/* Premium Corner Ornaments */}
+      <CornerOrnament position="top-left" className="opacity-30 dark:opacity-10" />
+      <CornerOrnament position="bottom-right" className="opacity-30 dark:opacity-10" />
+      <FloatingMandala className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
-      <div className="max-w-md mx-auto relative z-10">
+      <div className="max-w-md mx-auto relative z-10 flex flex-col items-center">
+        <BotanicalCrest />
         <motion.span
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,10 +73,12 @@ export default function Countdown() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-2xl sm:text-3xl font-serif text-ink-900 dark:text-gold-100 mb-8"
+          className="text-2xl sm:text-3xl font-serif text-ink-900 dark:text-gold-100 mb-2"
         >
           Menuju Hari Bahagia
         </motion.h3>
+
+        <HeaderDivider className="mb-8" />
 
         {/* Countdown Grid */}
         <div className="grid grid-cols-4 gap-3 max-w-sm mx-auto">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Send, CheckCircle, Users, Check } from 'lucide-react';
 import { RSVP } from '../types';
+import { CornerOrnament, HeaderDivider, BotanicalCrest, FloatingMandala } from './Ornaments';
 
 export default function RSVPForm() {
   const [formData, setFormData] = useState({
@@ -45,23 +46,23 @@ export default function RSVPForm() {
 
   return (
     <section id="rsvp-section" className="py-20 px-4 bg-transparent relative overflow-hidden">
-      {/* Decorative Gold Leaf Borders */}
-      <div className="absolute top-0 right-0 w-32 h-32 opacity-[0.04] pointer-events-none select-none">
-        <svg viewBox="0 0 100 100" fill="currentColor" className="text-gold-500">
-          <path d="M100,0 C80,30 50,40 0,50 C30,60 40,80 50,100 C60,80 70,60 100,50 C70,40 80,30 100,0 Z" />
-        </svg>
-      </div>
+      {/* Premium Corner Ornaments */}
+      <CornerOrnament position="top-right" />
+      <CornerOrnament position="bottom-left" />
+      <FloatingMandala className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
-      <div className="max-w-md mx-auto relative z-10">
+      <div className="max-w-md mx-auto relative z-10 flex flex-col items-center">
         
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 flex flex-col items-center">
+          <BotanicalCrest />
           <span className="text-xs font-sans tracking-[0.25em] text-gold-600 dark:text-gold-400 font-semibold uppercase block mb-2">
             R S V P
           </span>
           <h2 className="text-3xl font-serif text-ink-900 dark:text-gold-100 font-medium">
             Konfirmasi Kehadiran
           </h2>
+          <HeaderDivider className="mt-2" />
           <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-sans mt-3 px-4 leading-relaxed">
             Mohon konfirmasi kehadiran Anda sebelum <strong className="text-gold-600 dark:text-gold-400">15 Juni 2026</strong> untuk kenyamanan penyelenggaraan acara.
           </p>
