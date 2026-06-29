@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-cream: #fdfaf6;
+  --color-cream-dark: #faf4e9;
+  
+  --color-gold-50: #FCFAF6;
+  --color-gold-100: #FAF4E8;
+  --color-gold-200: #EFE3CE;
+  --color-gold-300: #E2D0B0;
+  --color-gold-400: #D3BC91;
+  --color-gold-500: #c5a059;
+  --color-gold-600: #A88340;
+  --color-gold-700: #886731;
+  --color-gold-800: #684D23;
+  --color-gold-900: #4B3617;
+  
+  --color-ink-50: #F6F6F6;
+  --color-ink-100: #ECECEC;
+  --color-ink-200: #D2D2D2;
+  --color-ink-300: #B1B1B1;
+  --color-ink-400: #8A8A8A;
+  --color-ink-500: #676767;
+  --color-ink-600: #4B4B4B;
+  --color-ink-700: #363636;
+  --color-ink-900: #2d2d2d;
+  --color-ink-950: #1a1a1a;
+  
+  --color-olive-50: #F7F8F6;
+  --color-olive-100: #ECEFEA;
+  --color-olive-200: #D6DDD1;
+  --color-olive-300: #B7C3AF;
+  --color-olive-400: #94A38A;
+  --color-olive-500: #738368;
+  --color-olive-600: #58674E;
+  --color-olive-700: #434F3C;
+  --color-olive-800: #2D3327;
+  --color-olive-900: #1B1E18;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+  
+  /* Smooth transitions for theme switching */
+  body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+}
+
+/* Custom radial background dot pattern */
+.bg-pattern {
+  background-image: radial-gradient(var(--color-gold-400) 0.6px, transparent 0.6px);
+  background-size: 24px 24px;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-300);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-500);
+}
+
+/* Sparkle/float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Fade-in reveal animation */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  animation: revealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

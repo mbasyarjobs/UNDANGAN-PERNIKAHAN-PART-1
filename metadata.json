@@ -1,0 +1,6 @@
+{
+  "name": "Undangan Pernikahan Premium",
+  "description": "Undangan Pernikahan Digital Premium Ajis & Amel - Mobile First, Dual Theme, Backsound Music, RSVP, & Ucapan Doa",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
